@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MUVAM - Ride Sharing Service</title>
+    <script defer src="src/main.js"></script>
+    <style>
+      .nav__links {
+        bottom: 50%;
+      }
+      /* img {
+        display: flex;
+        width: 100%;
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">MUVAM</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="/partnership.html">Partnership</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="#contact">Contact US</a></li>
+          <li>
+            <a href="/driver.html" style="color: #fff" class="btn hide--btn"
+              >Become a driver</a
+            >
+          </li>
+          <!-- <li><a href="#" class="btn">Become a driver</a></li> -->
+        </ul>
+        <div class="nav__btn">
+          <a href="/driver.html" style="color: #fff" class="btn"
+            >Become a driver</a
+          >
+        </div>
+      </nav>
+      <div class="header__container" id="home">
+        <img src="assets/car.png" class="car-img" alt="" />
+        <h1 class="typewriter">With muvam, pay less, travel more</h1>
+        <p>Choose from a range of categories and prices</p>
+
+        <div class="hero__box-downloadimg margin-top">
+          <img
+            src="assets/apple.png"
+            alt="download MUVAM on appstore"
+            class="margin-right appdownloadlogo"
+          />
+          <img src="assets/google.png" alt="download MUVAM on playstore" />
+        </div>
+        <div class="hero__phone-box">
+          <img
+            src="assets/iPhone 13 Pro (1).png"
+            class="hero__phone-img"
+            alt="header"
+            style="display: flex; width: 100%"
+          />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section__how">
+        <h3 class="text-align section-headings">How it Works</h3>
+        <div class="center-wrapper">
+          <ul class="section__how-links">
+            <li class="how__link how__link-active" data-tab="1">
+              Save on travels
+            </li>
+            <li class="how__link" data-tab="2">Select drivers</li>
+            <li class="how__link" data-tab="3">Compare rides</li>
+          </ul>
+        </div>
+
+        <div class="how__tabs contai">
+          <div class="how__tab how__tab--1">
+            <div class="how__text--box slide-in-left">
+              <h4 class="how__small-heading">Select location</h4>
+              <p class="how__paragraph">
+                With MUVAM, you can book rides from anywhere! Say no to
+                compulsory rates and high-demand manipulations.
+              </p>
+            </div>
+            <div class="how__imagebox">
+              <img src="assets/Group 9352.png" class="how__img" alt="" />
+            </div>
+          </div>
+          <div class="how__tab how__tab--2 hidden">
+            <div class="how__imagebox slide-in-left">
+              <img src="assets/Group 9354.png" class="how__img" alt="" />
+            </div>
+            <div class="how__text--box">
+              <h4 class="how__small-heading">Select the best driver</h4>
+              <p class="how__paragraph">
+                Choose the most reliable and trustworthy driver for your journey
+                with ease. With our in-app driver you are always safe.
+              </p>
+            </div>
+          </div>
+          <div class="how__tab how__tab--3 hidden">
+            <div class="how__text--box slide-in-left">
+              <h4 class="how__small-heading">Compare ride</h4>
+              <p class="how__paragraph">
+                Dont want to us MUVAM? No worries, you can compare ride prices
+                of other inter-state bus terminal free of charge on the MUVAM
+                app.
+              </p>
+            </div>
+            <div class="how__imagebox">
+              <img src="assets/Group 625743.png" class="how__img" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section contai">
+        <h2 class="text-align section-headings">Features</h2>
+
+        <div class="features-grid">
+          <!-- Ride-Sharing Feature -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <!-- Wrench/Pencil Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                />
+              </svg>
+            </div>
+            <h3 class="feature-title">Ride-Sharing</h3>
+            <p class="feature__paragraph">
+              Connect with drivers nearby and enjoy a hassle-free ride at
+              affordable rate. Book your ride in just a few taps
+            </p>
+          </div>
+
+          <!-- Compare ride Feature -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <!-- Taxi Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M10 2h4" />
+                <path d="M19 9h2v3a4 4 0 0 1-4 4h-1" />
+                <path d="M7 9H5v3a4 4 0 0 0 4 4h1" />
+                <path d="M5 9V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4" />
+                <rect width="16" height="4" x="4" y="11" rx="1" />
+                <path d="M8 15v2" />
+                <path d="M16 15v2" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Compare ride</h3>
+            <p class="feature__paragraph">
+              MUVAM helps users find the best ride option by comparing price of
+              other inter-state rides. Easily Choose the most convenient and
+              cost-effective ride - all in one app.
+            </p>
+          </div>
+
+          <!-- Live map Feature -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <!-- Map Pin Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Live map</h3>
+            <p class="feature__paragraph">
+              Track real-time locations with precision. Stay updated, navigate
+              effortlessly, and make informed decisions on the go.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="driver__section">
+        <div class="contai">
+          <div class="driver__grid">
+            <div class="driver-imgbox">
+              <img
+                src="assets/c330af5076ca88ba620b8a1eead3a2815a52a89f.jpg"
+                alt=""
+              />
+            </div>
+            <div class="text-content">
+              <h3 class="section-headings">Earn with MUVAM</h3>
+              <p class="driver__paragraph">
+                Set your own schedule and make money on your terms by driving to
+                where you are going.
+              </p>
+              <a class="bt" href="drivers.html">Become a driver</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="section__contact"
+        style="margin-bottom: 10rem"
+      >
+        <h3 class="text-align section-headings">Contact Us</h3>
+        <p class="text-align contact__paragraph">
+          Phone number: 08012345678
+          <br />
+          Address: 1 Emmanuel Street, Oliver Estate, Enugu, Nigeria.
+        </p>
+        <div class="contai">
+          <div class="contact__grid">
+            <form class="form">
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Email address"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="form__input"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Message"
+                class="form__input form__textarea"
+                required
+              />
+              <button class="form__btn">Submit</button>
+            </form>
+            <div class="contact__img">
+              <img
+                src="assets/9ce69a0ea774d03502e95cc3acc3ef48cbe1f773.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="download">
+      <div class="section__container download__container">
+        <div class="download__content">
+          <h2 class="section__header" style="color: #fff">
+            Download MUVAM APP
+          </h2>
+          <div class="download__links">
+            <a href="#">
+              <img src="assets/apple.png" alt="apple" />
+            </a>
+            <a href="#">
+              <img src="assets/google.png" alt="google" />
+            </a>
+          </div>
+        </div>
+        <div class="download__image">
+          <img src="assets/iPhone 13 Pro (1).png" alt="download" />
+        </div>
+      </div>
+    </section>
+
+    <section class="news" id="contact">
+      <div class="section__container news__container">
+        <h2 class="section__header">Stay up to date on all the latest news.</h2>
+        <form action="/">
+          <input type="text" placeholder="Your email" />
+          <button class="btn">
+            <i class="ri-send-plane-fill"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="#">Installation Manual</a></li>
+            <li><a href="#">Release Note</a></li>
+            <li><a href="#">Community Help</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Product</h4>
+          <ul class="footer__links">
+            <li><a href="#">Demo</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Features</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Follow Us</h4>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025 MUVAM. All rights reserved.
+      </div>
+    </footer>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+  </body>
+</html>
