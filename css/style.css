@@ -665,6 +665,9 @@ nav {
     flex-direction: column;
     gap: 2rem;
   }
+  .hero__box-downloadimg img {
+    width: 120px;
+  }
 
   .how__imagebox img {
     width: 300px;
