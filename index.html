@@ -28,6 +28,23 @@
         display: flex;
         width: 100%;
       } */
+      .nav__link--btn:link,
+      .nav__link--btn:visited {
+        display: inline-block;
+        padding: var(--space-sm) var(--space-lg);
+        border-radius: 1rem;
+        font-weight: var(--font-medium);
+        background-color: var(--main-color);
+        font-size: var(--font-lg);
+        color: var(--white-50);
+        transition: all 0.8s ease-in-out;
+        margin: 2rem auto;
+      }
+
+      .nav__link--btn:hover,
+      .nav__link--btn:active {
+        background-color: var(--secondary-color);
+      }
     </style>
   </head>
   <body>
@@ -59,7 +76,7 @@
           >
         </div>
       </nav>
-      <div class="header__container" id="home">
+      <div class="header__container animate-hero" id="home">
         <img src="assets/car.png" class="car-img" alt="" />
         <h1 class="typewriter">With muvam, pay less, travel more</h1>
         <p>Choose from a range of categories and prices</p>
@@ -83,10 +100,10 @@
       </div>
     </header>
     <main>
-      <section class="section__how">
-        <h3 class="text-align section-headings">How it Works</h3>
+      <section class="section__how fade-in-up">
+        <h3 class="text-align section-headings animate-title">How it Works</h3>
         <div class="center-wrapper">
-          <ul class="section__how-links">
+          <ul class="section__how-links animate-tabs">
             <li class="how__link how__link-active" data-tab="1">
               Save on travels
             </li>
@@ -96,23 +113,23 @@
         </div>
 
         <div class="how__tabs contai">
-          <div class="how__tab how__tab--1">
-            <div class="how__text--box slide-in-left">
+          <div class="how__tab how__tab--1 slide-in-left">
+            <div class="how__text--box animate-text">
               <h4 class="how__small-heading">Select location</h4>
               <p class="how__paragraph">
                 With MUVAM, you can book rides from anywhere! Say no to
                 compulsory rates and high-demand manipulations.
               </p>
             </div>
-            <div class="how__imagebox">
+            <div class="how__imagebox animate-image">
               <img src="assets/Group 9352.png" class="how__img" alt="" />
             </div>
           </div>
-          <div class="how__tab how__tab--2 hidden">
-            <div class="how__imagebox slide-in-left">
+          <div class="how__tab how__tab--2 hidden slide-in-right">
+            <div class="how__imagebox animate-image">
               <img src="assets/Group 9354.png" class="how__img" alt="" />
             </div>
-            <div class="how__text--box">
+            <div class="how__text--box animate-text">
               <h4 class="how__small-heading">Select the best driver</h4>
               <p class="how__paragraph">
                 Choose the most reliable and trustworthy driver for your journey
@@ -120,8 +137,8 @@
               </p>
             </div>
           </div>
-          <div class="how__tab how__tab--3 hidden">
-            <div class="how__text--box slide-in-left">
+          <div class="how__tab how__tab--3 hidden slide-in-up">
+            <div class="how__text--box animate-text">
               <h4 class="how__small-heading">Compare ride</h4>
               <p class="how__paragraph">
                 Dont want to us MUVAM? No worries, you can compare ride prices
@@ -129,20 +146,20 @@
                 app.
               </p>
             </div>
-            <div class="how__imagebox">
+            <div class="how__imagebox animate-image">
               <img src="assets/Group 625743.png" class="how__img" alt="" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="features-section contai">
-        <h2 class="text-align section-headings">Features</h2>
+      <section class="features-section contai fade-in-up">
+        <h2 class="text-align section-headings animate-title">Features</h2>
 
         <div class="features-grid">
           <!-- Ride-Sharing Feature -->
-          <div class="feature-card">
-            <div class="feature-icon">
+          <div class="feature-card animate-card" data-delay="0.1">
+            <div class="feature-icon pulse-animation">
               <!-- Wrench/Pencil Icon -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -168,8 +185,8 @@
           </div>
 
           <!-- Compare ride Feature -->
-          <div class="feature-card">
-            <div class="feature-icon">
+          <div class="feature-card animate-card" data-delay="0.2">
+            <div class="feature-icon pulse-animation">
               <!-- Taxi Icon -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -200,8 +217,8 @@
           </div>
 
           <!-- Live map Feature -->
-          <div class="feature-card">
-            <div class="feature-icon">
+          <div class="feature-card animate-card" data-delay="0.3">
+            <div class="feature-icon pulse-animation">
               <!-- Map Pin Icon -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -226,61 +243,63 @@
           </div>
         </div>
       </section>
-      <section class="driver__section">
+      <section class="driver__section fade-in-up">
         <div class="contai">
           <div class="driver__grid">
-            <div class="driver-imgbox">
+            <div class="driver-imgbox animate-image">
               <img
                 src="assets/c330af5076ca88ba620b8a1eead3a2815a52a89f.jpg"
                 alt=""
               />
             </div>
-            <div class="text-content">
+            <div class="text-content animate-text">
               <h3 class="section-headings">Earn with MUVAM</h3>
               <p class="driver__paragraph">
                 Set your own schedule and make money on your terms by driving to
                 where you are going.
               </p>
-              <a class="bt" href="drivers.html">Become a driver</a>
+              <a class="nav__link--btn animate-button" href="driver.html"
+                >Become a driver</a
+              >
             </div>
           </div>
         </div>
       </section>
       <section
         id="contact"
-        class="section__contact"
+        class="section__contact fade-in-up"
         style="margin-bottom: 10rem"
       >
-        <h3 class="text-align section-headings">Contact Us</h3>
-        <p class="text-align contact__paragraph">
+        <h3 class="text-align section-headings animate-title">Contact Us</h3>
+        <p class="text-align contact__paragraph animate-text">
           Phone number: 08012345678
           <br />
           Address: 1 Emmanuel Street, Oliver Estate, Enugu, Nigeria.
         </p>
         <div class="contai">
           <div class="contact__grid">
-            <form class="form">
+            <form class="form animate-form">
               <input
                 type="email"
-                class="form__input"
+                class="form__input animate-input"
                 placeholder="Email address"
                 required
               />
               <input
                 type="text"
                 placeholder="Full Name"
-                class="form__input"
+                class="form__input animate-input"
                 required
               />
               <input
                 type="text"
                 placeholder="Message"
-                class="form__input form__textarea"
+                class="form__input form__textarea animate-input"
                 required
               />
-              <button class="form__btn">Submit</button>
+              <button class="form__btn animate-button">Submit</button>
             </form>
-            <div class="contact__img">
+            <div class="contact__img animate-image">
               <img
                 src="assets/9ce69a0ea774d03502e95cc3acc3ef48cbe1f773.jpg"
                 alt=""
@@ -291,83 +310,97 @@
       </section>
     </main>
 
-    <section class="download">
+    <section class="download fade-in-up">
       <div class="section__container download__container">
-        <div class="download__content">
+        <div class="download__content animate-text">
           <h2 class="section__header" style="color: #fff">
             Download MUVAM APP
           </h2>
-          <div class="download__links">
-            <a href="#">
+          <div class="download__links animate-buttons">
+            <a href="#" class="animate-button">
               <img src="assets/apple.png" alt="apple" />
             </a>
-            <a href="#">
+            <a href="#" class="animate-button">
               <img src="assets/google.png" alt="google" />
             </a>
           </div>
         </div>
-        <div class="download__image">
+        <div class="download__image animate-image download__image--laptop">
           <img src="assets/iPhone 13 Pro (1).png" alt="download" />
+        </div>
+        <div class="download__image download__image--phone animate-image">
+          <img
+            src="assets/8b54deab7c114ac27583cb228e9d0c3f94bfa8a5.png"
+            alt="download"
+          />
         </div>
       </div>
     </section>
 
-    <section class="news" id="contact">
+    <section class="news fade-in-up" id="contact">
       <div class="section__container news__container">
-        <h2 class="section__header">Stay up to date on all the latest news.</h2>
-        <form action="/">
-          <input type="text" placeholder="Your email" />
-          <button class="btn">
+        <h2 class="section__header animate-title">
+          Stay up to date on all the latest news.
+        </h2>
+        <form action="/" class="animate-form">
+          <input type="text" placeholder="Your email" class="animate-input" />
+          <button class="btn animate-button">
             <i class="ri-send-plane-fill"></i>
           </button>
         </form>
       </div>
     </section>
 
-    <footer>
+    <footer class="fade-in-up">
       <div class="section__container footer__container">
-        <div class="footer__col">
+        <div class="footer__col animate-text">
           <h4>Resources</h4>
           <ul class="footer__links">
-            <li><a href="#">Installation Manual</a></li>
-            <li><a href="#">Release Note</a></li>
-            <li><a href="#">Community Help</a></li>
+            <li><a href="#" class="animate-link">Installation Manual</a></li>
+            <li><a href="#" class="animate-link">Release Note</a></li>
+            <li><a href="#" class="animate-link">Community Help</a></li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col animate-text">
           <h4>Company</h4>
           <ul class="footer__links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Support</a></li>
+            <li><a href="#" class="animate-link">About Us</a></li>
+            <li><a href="#" class="animate-link">Career</a></li>
+            <li><a href="#" class="animate-link">Press</a></li>
+            <li><a href="#" class="animate-link">Support</a></li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col animate-text">
           <h4>Product</h4>
           <ul class="footer__links">
-            <li><a href="#">Demo</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Features</a></li>
+            <li><a href="#" class="animate-link">Demo</a></li>
+            <li><a href="#" class="animate-link">Security</a></li>
+            <li><a href="#" class="animate-link">FAQ</a></li>
+            <li><a href="#" class="animate-link">Features</a></li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col animate-text">
           <h4>Follow Us</h4>
           <ul class="footer__socials">
             <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="animate-social"
+                ><i class="ri-facebook-fill"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#" class="animate-social"
+                ><i class="ri-twitter-fill"></i
+              ></a>
             </li>
             <li>
-              <a href="#"><i class="ri-linkedin-fill"></i></a>
+              <a href="#" class="animate-social"
+                ><i class="ri-linkedin-fill"></i
+              ></a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="footer__bar">
+      <div class="footer__bar animate-text">
         Copyright © 2025 MUVAM. All rights reserved.
       </div>
     </footer>

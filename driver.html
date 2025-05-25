@@ -60,6 +60,16 @@
       @media screen and (max-width: 576px) {
         .driver__box-text h1 {
           font-size: 30px;
+          text-align: center;
+          margin: 0 auto;
+        }
+        .hero__box {
+          padding: 0;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
         }
         .center {
           position: absolute;
@@ -90,6 +100,9 @@
           /* background-color: var(--white); */
           /* box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1); */
         }
+        .order {
+          order: 2;
+        }
       }
     </style>
   </head>
@@ -98,49 +111,64 @@
       <nav>
         <div class="nav__header">
           <div class="nav__logo">
-            <a style="color: #fff" href="/index.html">MUVAM</a>
+            <a style="color: #fff" href="/index.html" class="animate-logo"
+              >MUVAM</a
+            >
           </div>
-          <div class="nav__menu__btn" id="menu-btn">
+          <div class="nav__menu__btn animate-button" id="menu-btn">
             <i style="color: #fff" class="ri-menu-line"></i>
           </div>
         </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/partnership.html">Partnership</a></li>
-          <li><a href="/faq.html">FAQ</a></li>
-          <li><a href="#contact">Contact US</a></li>
+        <ul class="nav__links animate-nav" id="nav-links">
+          <li><a href="/index.html" class="animate-link">Home</a></li>
           <li>
-            <a href="/index.html" style="color: #fff" class="btn hide--btn"
+            <a href="/partnership.html" class="animate-link">Partnership</a>
+          </li>
+          <li><a href="/faq.html" class="animate-link">FAQ</a></li>
+          <li><a href="#contact" class="animate-link">Contact US</a></li>
+          <li>
+            <a
+              href="/index.html"
+              style="color: #fff"
+              class="btn hide--btn animate-button"
               >For Users</a
             >
           </li>
           <!-- <li><a href="#" class="btn">Become a driver</a></li> -->
         </ul>
         <div class="nav__btn">
-          <a href="/index.html" style="color: #fff" class="btn">For Users</a>
+          <a href="/index.html" style="color: #fff" class="btn animate-button"
+            >For Users</a
+          >
         </div>
       </nav>
 
       <section class="hero">
-        <div class="hero__box center">
+        <div class="hero__box">
           <div class="driver__box-text">
-            <h1>Drive and earn on your own terms with Muvam</h1>
+            <h1 class="">Drive and earn on your own terms with Muvam</h1>
           </div>
-          <div class="hero__box-downloadimg margin-top">
+          <div class="hero__box-downloadimg margin-top animate-buttons">
             <img
               src="assets/applelogo.png"
               alt="download MUVAM on appstore"
-              class="margin-right appdownloadlogo"
+              class="margin-right appdownloadlogo animate-button"
             />
-            <img src="assets/playlogo.png" alt="download MUVAM on playstore" />
+            <img
+              src="assets/playlogo.png"
+              alt="download MUVAM on playstore"
+              class="animate-button"
+            />
           </div>
         </div>
       </section>
     </header>
 
-    <section class="section__how">
-      <p class="text-align">Benefits</p>
-      <h3 class="text-align section-headings">Why drivers choose us</h3>
+    <section class="section__how fade-in-up">
+      <p class="text-align animate-subtitle">Benefits</p>
+      <h3 class="text-align section-headings animate-title">
+        Why drivers choose us
+      </h3>
       <!-- <div class="center-wrapper">
         <ul class="section__how-links">
           <li class="how__link how__link-active" data-tab="1">Freedom</li>
@@ -150,8 +178,8 @@
       </div> -->
 
       <div class="how__tabs contai">
-        <div class="how__tab how__tab--1">
-          <div class="how__text--box">
+        <div class="how__tab how__tab--1 slide-in-left">
+          <div class="how__text--box animate-text">
             <h4 class="how__small-heading">Freedom to choose</h4>
             <p class="how__paragraph">
               Take control of your driving experience by selecting ride requests
@@ -159,23 +187,16 @@
               trips that works for you.
             </p>
           </div>
-          <div class="how__imagebox">
+          <div class="how__imagebox animate-image">
             <img src="assets/Group 625747.png" alt="" />
           </div>
         </div>
 
-        <div class="how__tab how__tab--3">
-          <!-- <div class="how__text--box how__tab-phone">
-            <h4 class="how__small-heading">Work at your own time</h4>
-            <p class="how__paragraph">
-              Drive when it suits you. With flexible scheduling, you decide when
-              to fix rides. Just total control over your time.
-            </p>
-          </div> -->
-          <div class="how__imagebox">
+        <div class="how__tab how__tab--3 slide-in-right">
+          <div class="how__imagebox order animate-image">
             <img src="assets/Group 625748.png" alt="" />
           </div>
-          <div class="how__text--box how__tab-laptop">
+          <div class="how__text--box how__tab-laptop animate-text">
             <h4 class="how__small-heading">Work at your own time</h4>
             <p class="how__paragraph">
               Drive when it suits you. With flexible scheduling, you decide when
@@ -186,37 +207,37 @@
       </div>
     </section>
 
-    <section id="contact" class="section__contact">
-      <h3 class="text-align section-headings">Contact Us</h3>
-      <p class="text-align contact__paragraph">
+    <section id="contact" class="section__contact fade-in-up">
+      <h3 class="text-align section-headings animate-title">Contact Us</h3>
+      <p class="text-align contact__paragraph animate-text">
         Phone number: 08012345678
         <br />
         Address: 1 Emmanuel Street, Oliver Estate, Enugu, Nigeria.
       </p>
       <div class="contai">
         <div class="contact__grid">
-          <form class="form">
+          <form class="form animate-form">
             <input
               type="email"
-              class="form__input"
+              class="form__input animate-input"
               placeholder="Email address"
               required
             />
             <input
               type="text"
               placeholder="Full Name"
-              class="form__input"
+              class="form__input animate-input"
               required
             />
             <input
               type="text"
               placeholder="Message"
-              class="form__input form__textarea"
+              class="form__input form__textarea animate-input"
               required
             />
-            <button class="form__btn">Submit</button>
+            <button class="form__btn animate-button">Submit</button>
           </form>
-          <div class="contact__img">
+          <div class="contact__img animate-image">
             <img
               src="assets/9ce69a0ea774d03502e95cc3acc3ef48cbe1f773.jpg"
               alt=""
@@ -226,22 +247,22 @@
       </div>
     </section>
 
-    <section class="download">
+    <section class="download fade-in-up">
       <div class="section__container download__container">
-        <div class="download__content">
+        <div class="download__content animate-text">
           <h2 class="section__header" style="color: #fff">
             Download MUVAM APP
           </h2>
-          <div class="download__links">
-            <a href="#">
+          <div class="download__links animate-buttons">
+            <a href="#" class="animate-button">
               <img src="assets/apple.png" alt="apple" />
             </a>
-            <a href="#">
+            <a href="#" class="animate-button">
               <img src="assets/google.png" alt="google" />
             </a>
           </div>
         </div>
-        <div class="download__image">
+        <div class="download__image animate-image">
           <img src="assets/iPhone 13 Pro (1).png" alt="download" />
         </div>
       </div>
