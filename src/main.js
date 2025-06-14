@@ -1,3 +1,46 @@
+const modal = document.querySelector(".modal-overlay");
+const closeBtn = document.querySelector(".close-btn");
+const emailInput = document.querySelector("#email__input");
+const openModalBtn = document.getElementById("form__subscribe");
+
+openModalBtn.addEventListener("click", () => {
+  console.log(openModalBtn);
+  console.log(modal);
+  const email = emailInput.value;
+
+  if (email === "" || !validateEmail(email)) {
+    alert("Please enter a valid email");
+    return;
+  }
+
+  if (email !== "") {
+    const originalContent = openModalBtn.innerHTML;
+    openModalBtn.disabled = true;
+    modal.classList.remove("hidden");
+    openModalBtn.innerHTML = originalContent;
+    openModalBtn.disabled = false;
+  }
+});
+
+function validateEmail(email) {
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return re.test(String(email).toLowerCase());
+}
+
+closeBtn.addEventListener("click", () => {
+  emailInput.value = "";
+  modal.classList.add("hidden");
+  window.location.href = "https://www.muvam.app";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    emailInput.value = "";
+    modal.style.display = "none";
+    window.location.href = "https://www.muvam.app";
+  }
+});
+
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
@@ -254,7 +297,7 @@ if (parallaxElements.length > 0) {
 
 // Enhanced Form submission handling
 document.addEventListener("DOMContentLoaded", () => {
-  const forms = document.querySelectorAll("form");
+  const forms = document.querySelectorAll(".form");
 
   forms.forEach((form) => {
     form.addEventListener("submit", (e) => {

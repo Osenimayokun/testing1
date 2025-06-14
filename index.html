@@ -7,6 +7,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -17,7 +18,33 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon.ico"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+
     <link rel="stylesheet" href="css/style.css" />
+
     <title>MUVAM - Ride Sharing Service</title>
     <script defer src="src/main.js"></script>
     <style>
@@ -44,6 +71,292 @@
       .nav__link--btn:hover,
       .nav__link--btn:active {
         background-color: var(--secondary-color);
+      }
+      .form-container {
+        display: grid;
+        place-items: center;
+      }
+      .mform {
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        border-radius: 25px;
+        width: 80%;
+        max-width: 300px;
+        background-color: #fff;
+      }
+      .form-item {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-input,
+      .form-button {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 15px;
+        letter-spacing: 1px;
+        border: 0;
+      }
+      .form-input {
+        padding: 1.5rem;
+        outline: none;
+      }
+      .forminput::placeholder {
+        opacity: 0.4;
+      }
+      .form-input:focus::placeholder {
+        color: #205e43;
+        opacity: 0.85;
+        outline: none;
+      }
+      .form-input:first-of-type {
+        position: relative;
+      }
+      .form-input:first-of-type::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.1);
+      }
+      .form-button {
+        background: #205e43;
+        color: white;
+        padding: 1.25em 2.25em;
+      }
+
+      /* Modal Overlay */
+      .modal-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        backdrop-filter: blur(4px);
+        /* min-height: 100vh; */
+      }
+
+      /* Modal Container */
+      .modal {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        border-radius: 16px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        max-width: 80%;
+        width: 80%;
+        /* height: 80%; */
+        max-height: 80vh;
+        position: relative;
+        overflow: hidden;
+        animation: modalSlideIn 0.3s ease-out;
+      }
+
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9) translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+
+      /* Close Button */
+      .close-btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease;
+        z-index: 10;
+      }
+
+      .close-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .close-btn::before,
+      .close-btn::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background-color: white;
+        border-radius: 1px;
+      }
+
+      .close-btn::before {
+        transform: rotate(45deg);
+      }
+
+      .close-btn::after {
+        transform: rotate(-45deg);
+      }
+
+      /* Modal Content */
+      .modal-content {
+        background-color: white;
+        margin: 40px 20px 20px 20px;
+        border-radius: 12px;
+        padding: 48px 32px;
+        text-align: center;
+        position: relative;
+      }
+
+      /* Check Icon */
+      .check-icon {
+        width: 64px;
+        height: 64px;
+        background-color: #10b981;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px auto;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+
+      .check-icon::after {
+        content: "";
+        width: 20px;
+        height: 12px;
+        border: 3px solid white;
+        border-top: none;
+        border-right: none;
+        transform: rotate(-45deg);
+        margin-top: -4px;
+      }
+
+      /* Title */
+      .modal-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 12px;
+        line-height: 1.3;
+      }
+
+      /* Description */
+      .modal-description {
+        font-size: 16px;
+        color: #6b7280;
+        line-height: 1.5;
+        margin-bottom: 0;
+      }
+
+      /* Decorative Elements */
+      .modal::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 480px) {
+        .modal {
+          margin: 20px;
+          max-width: 85%;
+          width: 85%;
+        }
+
+        .modal-content {
+          margin: 30px 15px 15px 15px;
+          padding: 32px 24px;
+        }
+
+        .modal-title {
+          font-size: 22px;
+        }
+
+        .modal-description {
+          font-size: 16px;
+        }
+      }
+
+      /* Hide modal by default - remove this class to show */
+      .modal-overlay.hidden {
+        display: none;
+      }
+
+      /* Beta Button */
+      .modal-button {
+        margin-top: 24px;
+      }
+
+      .beta-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 16px 32px;
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        letter-spacing: 0.5px;
+      }
+
+      .beta-btn:hover {
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+      }
+
+      .beta-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+
+      @media only screen and (min-width: 550px) {
+        .mform {
+          flex-direction: row;
+          max-width: 600px;
+          border: 10px solid white;
+          border-radius: 2em;
+        }
+        .form-button {
+          border-radius: 3em;
+          margin-left: auto;
+        }
+        .form-item {
+          justify-content: center;
+          flex: 1 1;
+        }
+        .form-item:first-of-type {
+          right: 0;
+          top: 0;
+          bottom: 0;
+          /* width: 1px; */
+          height: initial;
+        }
       }
     </style>
   </head>
@@ -80,6 +393,45 @@
         <img src="assets/car.png" class="car-img" alt="" />
         <h1 class="typewriter">With muvam, pay less, travel more</h1>
         <p>Choose from a range of categories and prices</p>
+        <div class="form-container">
+          <form
+            action="https://taskkitly.us18.list-manage.com/subscribe/post?u=164fdf3c11754448cc80ed649&amp;id=85ced67738&amp;f_id=007ec2e1f0"
+            method="post"
+            target="_blank"
+            class="mform validate"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            target="_blank"
+          >
+            <div class="form-item">
+              <input
+                id="email__input"
+                type="email"
+                placeholder="email"
+                name="EMAIL"
+                class="form-input required email"
+                required
+              />
+            </div>
+
+            <!-- Hidden tag input (if needed) -->
+            <input type="hidden" name="tags" value="524" />
+
+            <!-- Bot protection field (Mailchimp anti-bot honeypot) -->
+            <div style="position: absolute; left: -5000px" aria-hidden="true">
+              <input
+                type="text"
+                name="b_164fdf3c11754448cc80ed649_85ced67738"
+                tabindex="-1"
+                value=""
+              />
+            </div>
+
+            <button type="submit" id="form__subscribe" class="form-button">
+              Get Early Access
+            </button>
+          </form>
+        </div>
 
         <div class="hero__box-downloadimg margin-top">
           <img
@@ -99,7 +451,60 @@
         </div>
       </div>
     </header>
+
+    <!-- Modal -->
+    <div class="modal-overlay hidden">
+      <div id="myModal" class="modal">
+        <button class="close-btn" aria-label="Close modal"></button>
+
+        <div class="modal-content">
+          <div class="check-icon" aria-hidden="true"></div>
+
+          <h2 class="modal-title">We've added you to our waitlist!</h2>
+
+          <p class="modal-description">We'll let you know when we launch</p>
+          <div class="modal-button">
+            <button class="beta-btn">Join our beta tester</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <main>
+      <section class="features-section contai fade-in-up">
+        <h2 class="text-align section-headings animate-title">Our Services</h2>
+
+        <div class="features-grid">
+          <!-- Ride-Sharing Feature -->
+          <div class="feature-card animate-card" data-delay="0.1">
+            <h3 class="feature-title">Ride-Sharing</h3>
+            <p class="feature__paragraph">
+              Connect with drivers nearby and enjoy a hassle-free ride at
+              affordable rate. Book your ride in just a few taps
+            </p>
+          </div>
+
+          <!-- Compare ride Feature -->
+          <div class="feature-card">
+            <h3 class="feature-title">Compare ride</h3>
+            <p class="feature__paragraph">
+              MUVAM helps users find the best ride option by comparing price of
+              other inter-state rides. Easily Choose the most convenient and
+              cost-effective ride - all in one app.
+            </p>
+          </div>
+
+          <!-- Live map Feature -->
+          <div class="feature-card animate-card" data-delay="0.3">
+            <h3 class="feature-title">Live map</h3>
+            <p class="feature__paragraph">
+              Track real-time locations with precision. Stay updated, navigate
+              effortlessly, and make informed decisions on the go.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section class="section__how fade-in-up">
         <h3 class="text-align section-headings animate-title">How it Works</h3>
         <div class="center-wrapper">
@@ -153,96 +558,6 @@
         </div>
       </section>
 
-      <section class="features-section contai fade-in-up">
-        <h2 class="text-align section-headings animate-title">Features</h2>
-
-        <div class="features-grid">
-          <!-- Ride-Sharing Feature -->
-          <div class="feature-card animate-card" data-delay="0.1">
-            <div class="feature-icon pulse-animation">
-              <!-- Wrench/Pencil Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-                />
-              </svg>
-            </div>
-            <h3 class="feature-title">Ride-Sharing</h3>
-            <p class="feature__paragraph">
-              Connect with drivers nearby and enjoy a hassle-free ride at
-              affordable rate. Book your ride in just a few taps
-            </p>
-          </div>
-
-          <!-- Compare ride Feature -->
-          <div class="feature-card animate-card" data-delay="0.2">
-            <div class="feature-icon pulse-animation">
-              <!-- Taxi Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M10 2h4" />
-                <path d="M19 9h2v3a4 4 0 0 1-4 4h-1" />
-                <path d="M7 9H5v3a4 4 0 0 0 4 4h1" />
-                <path d="M5 9V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4" />
-                <rect width="16" height="4" x="4" y="11" rx="1" />
-                <path d="M8 15v2" />
-                <path d="M16 15v2" />
-              </svg>
-            </div>
-            <h3 class="feature-title">Compare ride</h3>
-            <p class="feature__paragraph">
-              MUVAM helps users find the best ride option by comparing price of
-              other inter-state rides. Easily Choose the most convenient and
-              cost-effective ride - all in one app.
-            </p>
-          </div>
-
-          <!-- Live map Feature -->
-          <div class="feature-card animate-card" data-delay="0.3">
-            <div class="feature-icon pulse-animation">
-              <!-- Map Pin Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-            </div>
-            <h3 class="feature-title">Live map</h3>
-            <p class="feature__paragraph">
-              Track real-time locations with precision. Stay updated, navigate
-              effortlessly, and make informed decisions on the go.
-            </p>
-          </div>
-        </div>
-      </section>
       <section class="driver__section fade-in-up">
         <div class="contai">
           <div class="driver__grid">
@@ -274,7 +589,7 @@
         <p class="text-align contact__paragraph animate-text">
           Phone number: 08012345678
           <br />
-          Address: 1 Emmanuel Street, Oliver Estate, Enugu, Nigeria.
+          Shop 5, garden plaza, GRA, Enugu 400102, Enugu
         </p>
         <div class="contai">
           <div class="contact__grid">
@@ -398,7 +713,30 @@
         Copyright © 2025 MUVAM. All rights reserved.
       </div>
     </footer>
-    <!-- <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <script
+      type="text/javascript"
+      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+    ></script>
+    <script type="text/javascript">
+      (function ($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = "EMAIL";
+        ftypes[0] = "email";
+        fnames[1] = "FNAME";
+        ftypes[1] = "text";
+        fnames[2] = "LNAME";
+        ftypes[2] = "text";
+        fnames[3] = "ADDRESS";
+        ftypes[3] = "address";
+        fnames[4] = "PHONE";
+        ftypes[4] = "phone";
+        fnames[5] = "BIRTHDAY";
+        ftypes[5] = "birthday";
+        fnames[6] = "MMERGE6";
+        ftypes[6] = "text";
+      })(jQuery);
+      var $mcj = jQuery.noConflict(true);
+    </script>
   </body>
 </html>

@@ -385,28 +385,30 @@ nav {
 }
 
 .feature-card {
-  background-color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
   border-radius: 0.5rem;
-  padding: 2rem;
+  padding: 3rem 2.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid #e2e2e2;
+  opacity: 0.5;
 }
-
-.feature-icon {
-  background-color: #205e43;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  color: white;
+.feature-card:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../assets/hog.png);
+}
+.feature-card:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)),
+    url(../assets/compare.png);
+}
+.feature-card:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../assets/map.png);
 }
 
 .feature-title {
-  font-size: var(--font-lg);
-  color: var(--black-900);
+  font-size: var(--font-xl);
+  color: #fff;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -417,7 +419,9 @@ nav {
   /* font-size: 1rem; */
 }
 .feature__paragraph {
-  font-size: var(--font-sm);
+  color: #fff;
+  /* font-weight: bold; */
+  font-size: var(--font-md);
 }
 
 .driver__section {
@@ -1063,7 +1067,7 @@ footer {
   box-sizing: border-box;
 }
 
-/* Smooth transitions for better UX */
+/* SFoth transitions for better UX */
 *,
 *::before,
 *::after {
@@ -1572,18 +1576,13 @@ footer {
 .feature-card {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  /* background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%); */
 }
 
 .feature-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #fff 0%, #e9ecef 100%);
-}
-
-.feature-icon {
-  transition: all 0.4s ease;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #2d5a47 100%);
+  /* background: linear-gradient(135deg, #fff 0%, #e9ecef 100%); */
 }
 
 .feature-card:hover .feature-icon {
